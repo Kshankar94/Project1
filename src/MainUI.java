@@ -1,4 +1,4 @@
-package activity9;
+package codeOct29.src.edu.auburn;
 
 import javax.swing.*;
 import java.awt.*;
@@ -7,9 +7,9 @@ import java.awt.event.ActionListener;
 
 public class MainUI {
     public JFrame view;
-    public JButton btnAddProduct = new JButton("Add Product");
-    public JButton btnAddCustomer = new JButton("Add Customer");
-    public JButton btnAddPurchase = new JButton("Add Purchase");
+    public JButton btnManageProduct = new JButton("Manage Products");
+    public JButton btnManageCustomer = new JButton("Manage Customers");
+    public JButton btnManagePurchase = new JButton("Manage Purchases");
 
     public MainUI() {
         view = new JFrame();
@@ -29,32 +29,32 @@ public class MainUI {
         pane.add(titlePane, BorderLayout.PAGE_START);
 
         JPanel buttonPane = new JPanel(new FlowLayout());
-        buttonPane.add(btnAddProduct);
-        buttonPane.add(btnAddCustomer);
-        buttonPane.add(btnAddPurchase);
+        buttonPane.add(btnManageProduct);
+        buttonPane.add(btnManageCustomer);
+        buttonPane.add(btnManagePurchase);
         pane.add(buttonPane);
 
-        btnAddProduct.addActionListener(new ActionListener() {
+        btnManageProduct.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                AddProductUI ui = new AddProductUI();
+                ManageProductUI ui = new ManageProductUI();
                 ui.run();
             }
         });
         
-        btnAddCustomer.addActionListener(new ActionListener() {
+
+        btnManageCustomer.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                AddCustomerUI ui = new AddCustomerUI();
+                ManageCustomerUI ui = new ManageCustomerUI();
                 ui.run();
             }
         });
-       
         
-        btnAddPurchase.addActionListener(new ActionListener() {
+        btnManagePurchase.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                AddPurchaseUI ui = new AddPurchaseUI();
+            	ManagePurchaseUI ui = new ManagePurchaseUI();
                 ui.run();
             }
         });
